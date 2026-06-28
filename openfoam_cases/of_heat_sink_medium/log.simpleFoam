@@ -1,0 +1,1121 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2412                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _b8cf4d35-20260127 OPENFOAM=2412 patch=260127 version=2412
+Arch   : "LSB;label=32;scalar=64"
+Exec   : simpleFoam
+Date   : Jun 17 2026
+Time   : 14:14:28
+Host   : LAPTOP-8OT81PN8
+PID    : 2440
+I/O    : uncollated
+Case   : /home/saidul/of_heat_sink_medium
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+
+SIMPLE: convergence criteria
+    field p	 tolerance 0.0001
+    field U	 tolerance 0.0001
+
+Reading field p
+
+Reading field U
+
+Using dynamicCode for patch inlet on field U at line 29 in "/home/saidul/of_heat_sink_medium/0/U/boundaryField/inlet"
+Reading/calculating face flux field phi
+
+Selecting incompressible transport model Newtonian
+Selecting turbulence model type laminar
+Selecting laminar stress model Stokes
+No MRF models present
+
+No finite volume options present
+
+Starting time loop
+
+--> FOAM Warning : 
+Unknown function type fieldValueDelta
+
+Valid function types :
+
+96
+(
+AMIWeights
+BilgerMixtureFraction
+CourantNo
+Curle
+DESModelRegions
+DMD
+LambVector
+Lambda2
+MachNo
+ObukhovLength
+PecletNo
+Q
+XiReactionRate
+add
+age
+binField
+blendingFactor
+cellDecomposer
+columnAverage
+comfort
+components
+continuityError
+ddt
+ddt2
+derivedFields
+div
+electricPotential
+energyTransport
+enstrophy
+exprField
+externalCoupled
+extractEulerianParticles
+fieldAverage
+fieldCoordinateSystemTransform
+fieldExtents
+fieldMinMax
+flowType
+flux
+fluxSummary
+grad
+heatTransferCoeff
+histogram
+interfaceHeight
+limitFields
+log
+mag
+magSqr
+mapFields
+momentum
+momentumError
+multiFieldValue
+multiphaseInterHtcModel
+multiply
+nearWallFields
+norm
+particleDistribution
+patchProbes
+pow
+pressure
+probes
+processorField
+proudmanAcousticPower
+psiReactionThermoMoleFractions
+psiReactionsSensitivityAnalysis
+psiSpecieReactionRates
+randomise
+reactingEulerHtcModel
+readFields
+reference
+regionSizeDistribution
+resolutionIndex
+rhoReactionThermoMoleFractions
+rhoReactionsSensitivityAnalysis
+rhoSpecieReactionRates
+scalarTransport
+setFlow
+sets
+stabilityBlendingFactor
+streamFunction
+streamLine
+subtract
+surfaceDistance
+surfaceFieldValue
+surfaceInterpolate
+surfaces
+turbulenceFields
+valueAverage
+volFieldValue
+vorticity
+wallBoundedStreamLine
+wallHeatFlux
+wallShearStress
+writeCellCentres
+writeCellVolumes
+yPlus
+zeroGradient
+)
+
+
+
+    From static Foam::autoPtr<Foam::functionObject> Foam::functionObject::New(const Foam::word&, const Foam::Time&, const Foam::dictionary&)
+    in file db/functionObjects/functionObject/functionObject.C at line 129.
+--> loading function object 'pressureDrop'
+
+Time = 1
+
+smoothSolver:  Solving for Ux, Initial residual = 1, Final residual = 0.045600078, No Iterations 2
+smoothSolver:  Solving for Uy, Initial residual = 1, Final residual = 0.036491262, No Iterations 2
+smoothSolver:  Solving for Uz, Initial residual = 0.99991586, Final residual = 0.037359312, No Iterations 1
+GAMG:  Solving for p, Initial residual = 1, Final residual = 0.023189997, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.0026696125, Final residual = 3.9328998e-05, No Iterations 2
+GAMG:  Solving for p, Initial residual = 7.858993e-05, Final residual = 2.309519e-06, No Iterations 3
+time step continuity errors : sum local = 0.00019553298, global = -2.5335681e-05, cumulative = -2.5335681e-05
+ExecutionTime = 2.04 s  ClockTime = 2 s
+
+scalarTransport execute: T
+smoothSolver:  Solving for T, Initial residual = 1, Final residual = 0.095900965, No Iterations 3
+scalarTransport: T: T is converged.
+	initial-residual tolerance: 1
+	outer iteration: 1
+
+Time = 2
+
+smoothSolver:  Solving for Ux, Initial residual = 0.30167139, Final residual = 0.021460377, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.38014274, Final residual = 0.032222566, No Iterations 4
+smoothSolver:  Solving for Uz, Initial residual = 0.51154132, Final residual = 0.033358983, No Iterations 3
+GAMG:  Solving for p, Initial residual = 0.0061447688, Final residual = 0.00019431765, No Iterations 5
+GAMG:  Solving for p, Initial residual = 0.010349217, Final residual = 0.0002315251, No Iterations 2
+GAMG:  Solving for p, Initial residual = 0.00036548282, Final residual = 1.0179087e-05, No Iterations 4
+time step continuity errors : sum local = 0.00011423322, global = 8.6618129e-06, cumulative = -1.6673868e-05
+ExecutionTime = 2.81 s  ClockTime = 3 s
+
+scalarTransport execute: T
+smoothSolver:  Solving for T, Initial residual = 0.059342999, Final residual = 0.0058488446, No Iterations 4
+scalarTransport: T: T is converged.
+	initial-residual tolerance: 1
+	outer iteration: 1
+
+Time = 3
+
+smoothSolver:  Solving for Ux, Initial residual = 0.081474384, Final residual = 0.0080761849, No Iterations 4
+smoothSolver:  Solving for Uy, Initial residual = 0.17635461, Final residual = 0.015875732, No Iterations 4
+smoothSolver:  Solving for Uz, Initial residual = 0.32989163, Final residual = 0.022755283, No Iterations 3
+GAMG:  Solving for p, Initial residual = 0.011003616, Final residual = 0.00036537493, No Iterations 4
+GAMG:  Solving for p, Initial residual = 0.0029755407, Final residual = 9.8926117e-05, No Iterations 2
+GAMG:  Solving for p, Initial residual = 0.00014959995, Final residual = 4.1655822e-06, No Iterations 4
+time step continuity errors : sum local = 2.9716106e-05, global = 6.2409026e-06, cumulative = -1.0432965e-05
+ExecutionTime = 3.77 s  ClockTime = 4 s
+
+scalarTransport execute: T
+smoothSolver:  Solving for T, Initial residual = 0.025292959, Final residual = 0.0019677358, No Iterations 5
+scalarTransport: T: T is converged.
+	initial-residual tolerance: 1
+	outer iteration: 1
+
+Time = 4
+
+smoothSolver:  Solving for Ux, Initial residual = 0.045760269, Final residual = 0.0043840294, No Iterations 4
+smoothSolver:  Solving for Uy, Initial residual = 0.11991298, Final residual = 0.0074129001, No Iterations 5
+smoothSolver:  Solving for Uz, Initial residual = 0.158958, Final residual = 0.010040097, No Iterations 4
+GAMG:  Solving for p, Initial residual = 0.010351666, Final residual = 0.00035712708, No Iterations 3
+GAMG:  Solving for p, Initial residual = 0.0016483246, Final residual = 7.0840614e-05, No Iterations 2
+GAMG:  Solving for p, Initial residual = 0.00011117163, Final residual = 2.5298649e-06, No Iterations 4
+time step continuity errors : sum local = 1.4556376e-05, global = 1.1417987e-06, cumulative = -9.2911663e-06
+ExecutionTime = 4.7 s  ClockTime = 4 s
+
+scalarTransport execute: T
+smoothSolver:  Solving for T, Initial residual = 0.015547831, Final residual = 0.0013167047, No Iterations 5
+scalarTransport: T: T is converged.
+	initial-residual tolerance: 1
+	outer iteration: 1
+
+Time = 5
+
+smoothSolver:  Solving for Ux, Initial residual = 0.030941424, Final residual = 0.0019148896, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.093977337, Final residual = 0.00616378, No Iterations 5
+smoothSolver:  Solving for Uz, Initial residual = 0.095705526, Final residual = 0.0071015551, No Iterations 4
+GAMG:  Solving for p, Initial residual = 0.010599792, Final residual = 0.00026300646, No Iterations 3
+GAMG:  Solving for p, Initial residual = 0.0011068781, Final residual = 4.9658771e-05, No Iterations 2
+GAMG:  Solving for p, Initial residual = 8.0457906e-05, Final residual = 1.9247324e-06, No Iterations 4
+time step continuity errors : sum local = 9.6372929e-06, global = 6.4797932e-07, cumulative = -8.643187e-06
+ExecutionTime = 5.57 s  ClockTime = 5 s
+
+scalarTransport execute: T
+smoothSolver:  Solving for T, Initial residual = 0.01154399, Final residual = 0.00098584564, No Iterations 5
+scalarTransport: T: T is converged.
+	initial-residual tolerance: 1
+	outer iteration: 1
+
+Time = 6
+
+smoothSolver:  Solving for Ux, Initial residual = 0.023841375, Final residual = 0.0015272822, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.072861132, Final residual = 0.0052266634, No Iterations 5
+smoothSolver:  Solving for Uz, Initial residual = 0.069177859, Final residual = 0.0054174857, No Iterations 4
+GAMG:  Solving for p, Initial residual = 0.01047292, Final residual = 0.00020845164, No Iterations 3
+GAMG:  Solving for p, Initial residual = 0.00077297289, Final residual = 2.3659778e-05, No Iterations 3
+GAMG:  Solving for p, Initial residual = 5.5106139e-05, Final residual = 1.3703758e-06, No Iterations 3
+time step continuity errors : sum local = 6.27763e-06, global = 7.0520804e-07, cumulative = -7.9379789e-06
+ExecutionTime = 6.33 s  ClockTime = 6 s
+
+scalarTransport execute: T
+smoothSolver:  Solving for T, Initial residual = 0.0094493362, Final residual = 0.00078836085, No Iterations 5
+scalarTransport: T: T is converged.
+	initial-residual tolerance: 1
+	outer iteration: 1
+
+Time = 7
+
+smoothSolver:  Solving for Ux, Initial residual = 0.019375574, Final residual = 0.0012793216, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.058235705, Final residual = 0.0044827182, No Iterations 5
+smoothSolver:  Solving for Uz, Initial residual = 0.05516653, Final residual = 0.0043315019, No Iterations 4
+GAMG:  Solving for p, Initial residual = 0.0092791636, Final residual = 0.00016682009, No Iterations 3
+GAMG:  Solving for p, Initial residual = 0.00059769782, Final residual = 1.9034139e-05, No Iterations 3
+GAMG:  Solving for p, Initial residual = 4.7391363e-05, Final residual = 1.1048626e-06, No Iterations 3
+time step continuity errors : sum local = 4.7568118e-06, global = 1.0213843e-06, cumulative = -6.9165946e-06
+ExecutionTime = 7.06 s  ClockTime = 7 s
+
+scalarTransport execute: T
+smoothSolver:  Solving for T, Initial residual = 0.0081612924, Final residual = 0.00065554064, No Iterations 5
+scalarTransport: T: T is converged.
+	initial-residual tolerance: 1
+	outer iteration: 1
+
+Time = 8
+
+smoothSolver:  Solving for Ux, Initial residual = 0.01602928, Final residual = 0.0010889851, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.050027286, Final residual = 0.0039453488, No Iterations 5
+smoothSolver:  Solving for Uz, Initial residual = 0.046137326, Final residual = 0.0035871361, No Iterations 4
+GAMG:  Solving for p, Initial residual = 0.0079992113, Final residual = 0.00013400236, No Iterations 3
+GAMG:  Solving for p, Initial residual = 0.00047521775, Final residual = 1.4962104e-05, No Iterations 3
+GAMG:  Solving for p, Initial residual = 4.1254072e-05, Final residual = 8.9125492e-07, No Iterations 3
+time step continuity errors : sum local = 3.65336e-06, global = -6.3849177e-08, cumulative = -6.9804438e-06
+ExecutionTime = 7.77 s  ClockTime = 8 s
+
+scalarTransport execute: T
+smoothSolver:  Solving for T, Initial residual = 0.0072772124, Final residual = 0.00055947809, No Iterations 5
+scalarTransport: T: T is converged.
+	initial-residual tolerance: 1
+	outer iteration: 1
+
+Time = 9
+
+smoothSolver:  Solving for Ux, Initial residual = 0.013433569, Final residual = 0.00093591972, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.044131305, Final residual = 0.0034734706, No Iterations 5
+smoothSolver:  Solving for Uz, Initial residual = 0.038304623, Final residual = 0.0029927504, No Iterations 4
+GAMG:  Solving for p, Initial residual = 0.0069983626, Final residual = 0.00011342393, No Iterations 3
+GAMG:  Solving for p, Initial residual = 0.00039209439, Final residual = 1.2634349e-05, No Iterations 3
+GAMG:  Solving for p, Initial residual = 3.5557474e-05, Final residual = 7.6821102e-07, No Iterations 3
+time step continuity errors : sum local = 3.0231801e-06, global = -2.4880774e-07, cumulative = -7.2292515e-06
+ExecutionTime = 8.51 s  ClockTime = 8 s
+
+scalarTransport execute: T
+smoothSolver:  Solving for T, Initial residual = 0.0066169637, Final residual = 0.0004862553, No Iterations 5
+scalarTransport: T: T is converged.
+	initial-residual tolerance: 1
+	outer iteration: 1
+
+Time = 10
+
+smoothSolver:  Solving for Ux, Initial residual = 0.011459643, Final residual = 0.00081078864, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.039166359, Final residual = 0.0030525014, No Iterations 5
+smoothSolver:  Solving for Uz, Initial residual = 0.031450579, Final residual = 0.002490196, No Iterations 4
+GAMG:  Solving for p, Initial residual = 0.0061448666, Final residual = 0.00010026343, No Iterations 3
+GAMG:  Solving for p, Initial residual = 0.00033177573, Final residual = 1.0727157e-05, No Iterations 3
+GAMG:  Solving for p, Initial residual = 3.1620227e-05, Final residual = 6.7875671e-07, No Iterations 3
+time step continuity errors : sum local = 2.5808832e-06, global = -3.1000095e-07, cumulative = -7.5392525e-06
+ExecutionTime = 9.24 s  ClockTime = 9 s
+
+scalarTransport execute: T
+smoothSolver:  Solving for T, Initial residual = 0.0060861601, Final residual = 0.00042789543, No Iterations 5
+scalarTransport: T: T is converged.
+	initial-residual tolerance: 1
+	outer iteration: 1
+
+Time = 11
+
+smoothSolver:  Solving for Ux, Initial residual = 0.0099450716, Final residual = 0.00070711733, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.03447236, Final residual = 0.0026689173, No Iterations 5
+smoothSolver:  Solving for Uz, Initial residual = 0.026033161, Final residual = 0.0021010524, No Iterations 4
+GAMG:  Solving for p, Initial residual = 0.0053511622, Final residual = 8.9306236e-05, No Iterations 3
+GAMG:  Solving for p, Initial residual = 0.00028316204, Final residual = 9.5399152e-06, No Iterations 3
+GAMG:  Solving for p, Initial residual = 2.7934674e-05, Final residual = 5.7955955e-07, No Iterations 3
+time step continuity errors : sum local = 2.1400496e-06, global = -2.0177953e-07, cumulative = -7.741032e-06
+ExecutionTime = 9.96 s  ClockTime = 10 s
+
+scalarTransport execute: T
+smoothSolver:  Solving for T, Initial residual = 0.0056297643, Final residual = 0.00037946657, No Iterations 5
+scalarTransport: T: T is converged.
+	initial-residual tolerance: 1
+	outer iteration: 1
+
+Time = 12
+
+smoothSolver:  Solving for Ux, Initial residual = 0.0087197567, Final residual = 0.0006200143, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.030215913, Final residual = 0.0023239436, No Iterations 5
+smoothSolver:  Solving for Uz, Initial residual = 0.022258578, Final residual = 0.0018274052, No Iterations 4
+GAMG:  Solving for p, Initial residual = 0.0046569532, Final residual = 8.010194e-05, No Iterations 3
+GAMG:  Solving for p, Initial residual = 0.00024256888, Final residual = 8.5592409e-06, No Iterations 3
+GAMG:  Solving for p, Initial residual = 2.4753638e-05, Final residual = 5.0000677e-07, No Iterations 3
+time step continuity errors : sum local = 1.7998603e-06, global = -1.4334801e-07, cumulative = -7.88438e-06
+ExecutionTime = 10.76 s  ClockTime = 11 s
+
+scalarTransport execute: T
+smoothSolver:  Solving for T, Initial residual = 0.0052170726, Final residual = 0.00033790412, No Iterations 5
+scalarTransport: T: T is converged.
+	initial-residual tolerance: 1
+	outer iteration: 1
+
+Time = 13
+
+smoothSolver:  Solving for Ux, Initial residual = 0.0076583195, Final residual = 0.00054508913, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.026478131, Final residual = 0.002022761, No Iterations 5
+smoothSolver:  Solving for Uz, Initial residual = 0.019541798, Final residual = 0.0016462741, No Iterations 4
+GAMG:  Solving for p, Initial residual = 0.0040911253, Final residual = 7.1172725e-05, No Iterations 3
+GAMG:  Solving for p, Initial residual = 0.00020776552, Final residual = 7.5893611e-06, No Iterations 3
+GAMG:  Solving for p, Initial residual = 2.1713422e-05, Final residual = 1.0843326e-06, No Iterations 2
+time step continuity errors : sum local = 3.8175918e-06, global = 6.4695287e-07, cumulative = -7.2374271e-06
+ExecutionTime = 11.5 s  ClockTime = 11 s
+
+scalarTransport execute: T
+smoothSolver:  Solving for T, Initial residual = 0.0048318394, Final residual = 0.0003013359, No Iterations 5
+scalarTransport: T: T is converged.
+	initial-residual tolerance: 1
+	outer iteration: 1
+
+Time = 14
+
+smoothSolver:  Solving for Ux, Initial residual = 0.0067411515, Final residual = 0.00047894929, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.023366917, Final residual = 0.0017674279, No Iterations 5
+smoothSolver:  Solving for Uz, Initial residual = 0.017235066, Final residual = 0.0015115093, No Iterations 4
+GAMG:  Solving for p, Initial residual = 0.0036366732, Final residual = 6.246938e-05, No Iterations 3
+GAMG:  Solving for p, Initial residual = 0.00017824317, Final residual = 6.6333683e-06, No Iterations 3
+GAMG:  Solving for p, Initial residual = 1.8812618e-05, Final residual = 8.8700065e-07, No Iterations 2
+time step continuity errors : sum local = 3.0638054e-06, global = 6.0517319e-07, cumulative = -6.6322539e-06
+ExecutionTime = 12.21 s  ClockTime = 12 s
+
+scalarTransport execute: T
+smoothSolver:  Solving for T, Initial residual = 0.0044647551, Final residual = 0.0002686213, No Iterations 5
+scalarTransport: T: T is converged.
+	initial-residual tolerance: 1
+	outer iteration: 1
+
+Time = 15
+
+smoothSolver:  Solving for Ux, Initial residual = 0.0059489201, Final residual = 0.00042022307, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.020930351, Final residual = 0.0015557975, No Iterations 5
+smoothSolver:  Solving for Uz, Initial residual = 0.015290555, Final residual = 0.0013960594, No Iterations 4
+GAMG:  Solving for p, Initial residual = 0.0032245323, Final residual = 5.4547746e-05, No Iterations 3
+GAMG:  Solving for p, Initial residual = 0.00015384135, Final residual = 5.7813367e-06, No Iterations 3
+GAMG:  Solving for p, Initial residual = 1.607131e-05, Final residual = 7.5416693e-07, No Iterations 2
+time step continuity errors : sum local = 2.5632792e-06, global = 5.2262445e-07, cumulative = -6.1096295e-06
+ExecutionTime = 12.95 s  ClockTime = 13 s
+
+scalarTransport execute: T
+smoothSolver:  Solving for T, Initial residual = 0.0041112956, Final residual = 0.00023906932, No Iterations 5
+scalarTransport: T: T is converged.
+	initial-residual tolerance: 1
+	outer iteration: 1
+
+Time = 16
+
+smoothSolver:  Solving for Ux, Initial residual = 0.0052634135, Final residual = 0.00036804753, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.018830923, Final residual = 0.0013773086, No Iterations 5
+smoothSolver:  Solving for Uz, Initial residual = 0.013692352, Final residual = 0.0012942826, No Iterations 4
+GAMG:  Solving for p, Initial residual = 0.0028604635, Final residual = 4.7161096e-05, No Iterations 3
+GAMG:  Solving for p, Initial residual = 0.00013296997, Final residual = 5.0504491e-06, No Iterations 3
+GAMG:  Solving for p, Initial residual = 1.3491342e-05, Final residual = 6.5056937e-07, No Iterations 2
+time step continuity errors : sum local = 2.1820116e-06, global = 4.2552829e-07, cumulative = -5.6841012e-06
+ExecutionTime = 13.67 s  ClockTime = 13 s
+
+scalarTransport execute: T
+smoothSolver:  Solving for T, Initial residual = 0.003769433, Final residual = 0.00036989124, No Iterations 4
+scalarTransport: T: T is converged.
+	initial-residual tolerance: 1
+	outer iteration: 1
+
+Time = 17
+
+smoothSolver:  Solving for Ux, Initial residual = 0.004656885, Final residual = 0.00032171576, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.016924745, Final residual = 0.001219549, No Iterations 5
+smoothSolver:  Solving for Uz, Initial residual = 0.012417406, Final residual = 0.001204803, No Iterations 4
+GAMG:  Solving for p, Initial residual = 0.0025311591, Final residual = 4.0027744e-05, No Iterations 3
+GAMG:  Solving for p, Initial residual = 0.00011403587, Final residual = 4.4240632e-06, No Iterations 3
+GAMG:  Solving for p, Initial residual = 1.1079539e-05, Final residual = 2.2828117e-07, No Iterations 3
+time step continuity errors : sum local = 7.5771918e-07, global = -6.1396678e-08, cumulative = -5.7454979e-06
+ExecutionTime = 14.36 s  ClockTime = 14 s
+
+scalarTransport execute: T
+smoothSolver:  Solving for T, Initial residual = 0.0034545768, Final residual = 0.00033181687, No Iterations 4
+scalarTransport: T: T is converged.
+	initial-residual tolerance: 1
+	outer iteration: 1
+
+Time = 18
+
+smoothSolver:  Solving for Ux, Initial residual = 0.004109703, Final residual = 0.00028053554, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.015201624, Final residual = 0.0010774265, No Iterations 5
+smoothSolver:  Solving for Uz, Initial residual = 0.011327192, Final residual = 0.0011245317, No Iterations 4
+GAMG:  Solving for p, Initial residual = 0.0022468056, Final residual = 0.00010463487, No Iterations 2
+GAMG:  Solving for p, Initial residual = 0.0001616226, Final residual = 6.5142995e-06, No Iterations 3
+GAMG:  Solving for p, Initial residual = 1.1994174e-05, Final residual = 4.1962608e-07, No Iterations 3
+time step continuity errors : sum local = 1.3827157e-06, global = -1.0158442e-07, cumulative = -5.8470823e-06
+ExecutionTime = 15.1 s  ClockTime = 15 s
+
+scalarTransport execute: T
+smoothSolver:  Solving for T, Initial residual = 0.0031507107, Final residual = 0.00029631935, No Iterations 4
+scalarTransport: T: T is converged.
+	initial-residual tolerance: 1
+	outer iteration: 1
+
+Time = 19
+
+smoothSolver:  Solving for Ux, Initial residual = 0.0036151101, Final residual = 0.0002439345, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.013657948, Final residual = 0.00094921074, No Iterations 5
+smoothSolver:  Solving for Uz, Initial residual = 0.010323876, Final residual = 0.00062171679, No Iterations 5
+GAMG:  Solving for p, Initial residual = 0.0020178045, Final residual = 8.679267e-05, No Iterations 2
+GAMG:  Solving for p, Initial residual = 0.00013466864, Final residual = 4.6480982e-06, No Iterations 3
+GAMG:  Solving for p, Initial residual = 9.2194985e-06, Final residual = 3.2215494e-07, No Iterations 3
+time step continuity errors : sum local = 1.0560053e-06, global = -7.1217592e-08, cumulative = -5.9182999e-06
+ExecutionTime = 15.81 s  ClockTime = 16 s
+
+scalarTransport execute: T
+smoothSolver:  Solving for T, Initial residual = 0.0028592523, Final residual = 0.00026351921, No Iterations 4
+scalarTransport: T: T is converged.
+	initial-residual tolerance: 1
+	outer iteration: 1
+
+Time = 20
+
+smoothSolver:  Solving for Ux, Initial residual = 0.0031691975, Final residual = 0.00021154073, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.012271898, Final residual = 0.00083503549, No Iterations 5
+smoothSolver:  Solving for Uz, Initial residual = 0.0092288338, Final residual = 0.00055691137, No Iterations 5
+GAMG:  Solving for p, Initial residual = 0.001793668, Final residual = 7.0949952e-05, No Iterations 2
+GAMG:  Solving for p, Initial residual = 0.0001107869, Final residual = 2.8567346e-06, No Iterations 3
+GAMG:  Solving for p, Initial residual = 7.0049805e-06, Final residual = 2.2171711e-07, No Iterations 3
+time step continuity errors : sum local = 7.2463731e-07, global = -5.9205976e-08, cumulative = -5.9775059e-06
+ExecutionTime = 16.55 s  ClockTime = 16 s
+
+scalarTransport execute: T
+smoothSolver:  Solving for T, Initial residual = 0.002581648, Final residual = 0.00023340306, No Iterations 4
+scalarTransport: T: T is converged.
+	initial-residual tolerance: 1
+	outer iteration: 1
+
+Time = 21
+
+smoothSolver:  Solving for Ux, Initial residual = 0.0027682357, Final residual = 0.00018303534, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.010975385, Final residual = 0.00073348701, No Iterations 5
+smoothSolver:  Solving for Uz, Initial residual = 0.0083510922, Final residual = 0.00050461182, No Iterations 5
+GAMG:  Solving for p, Initial residual = 0.0016031434, Final residual = 5.9239086e-05, No Iterations 2
+GAMG:  Solving for p, Initial residual = 9.2083172e-05, Final residual = 2.1009625e-06, No Iterations 3
+GAMG:  Solving for p, Initial residual = 5.9529199e-06, Final residual = 1.6830637e-07, No Iterations 3
+time step continuity errors : sum local = 5.4949585e-07, global = 3.5780043e-08, cumulative = -5.9417258e-06
+ExecutionTime = 17.36 s  ClockTime = 17 s
+
+scalarTransport execute: T
+smoothSolver:  Solving for T, Initial residual = 0.0023196999, Final residual = 0.00020598443, No Iterations 4
+scalarTransport: T: T is converged.
+	initial-residual tolerance: 1
+	outer iteration: 1
+
+Time = 22
+
+smoothSolver:  Solving for Ux, Initial residual = 0.0024107952, Final residual = 0.00015816698, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.0097518045, Final residual = 0.00064464533, No Iterations 5
+smoothSolver:  Solving for Uz, Initial residual = 0.0075974336, Final residual = 0.00045514307, No Iterations 5
+GAMG:  Solving for p, Initial residual = 0.0014319291, Final residual = 5.0027912e-05, No Iterations 2
+GAMG:  Solving for p, Initial residual = 7.706825e-05, Final residual = 2.3202426e-06, No Iterations 3
+GAMG:  Solving for p, Initial residual = 6.3446076e-06, Final residual = 2.423101e-07, No Iterations 3
+time step continuity errors : sum local = 7.9157805e-07, global = 2.4426375e-07, cumulative = -5.6974621e-06
+ExecutionTime = 18.2 s  ClockTime = 18 s
+
+scalarTransport execute: T
+smoothSolver:  Solving for T, Initial residual = 0.0020751238, Final residual = 0.00018125129, No Iterations 4
+scalarTransport: T: T is converged.
+	initial-residual tolerance: 1
+	outer iteration: 1
+
+Time = 23
+
+smoothSolver:  Solving for Ux, Initial residual = 0.0020962973, Final residual = 0.00013660521, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.0086066324, Final residual = 0.00056920524, No Iterations 5
+smoothSolver:  Solving for Uz, Initial residual = 0.0068976147, Final residual = 0.00040507027, No Iterations 5
+GAMG:  Solving for p, Initial residual = 0.0012767402, Final residual = 4.3642323e-05, No Iterations 2
+GAMG:  Solving for p, Initial residual = 6.5939748e-05, Final residual = 1.9423223e-06, No Iterations 3
+GAMG:  Solving for p, Initial residual = 6.0132562e-06, Final residual = 1.2885718e-07, No Iterations 3
+time step continuity errors : sum local = 4.2178596e-07, global = -2.812774e-09, cumulative = -5.7002748e-06
+ExecutionTime = 19.04 s  ClockTime = 19 s
+
+scalarTransport execute: T
+smoothSolver:  Solving for T, Initial residual = 0.0018494215, Final residual = 0.00015914299, No Iterations 4
+scalarTransport: T: T is converged.
+	initial-residual tolerance: 1
+	outer iteration: 1
+
+Time = 24
+
+smoothSolver:  Solving for Ux, Initial residual = 0.001821073, Final residual = 0.0001180058, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.0075676857, Final residual = 0.00050750903, No Iterations 5
+smoothSolver:  Solving for Uz, Initial residual = 0.0062188814, Final residual = 0.00061258576, No Iterations 4
+GAMG:  Solving for p, Initial residual = 0.0011307132, Final residual = 4.2667877e-05, No Iterations 2
+GAMG:  Solving for p, Initial residual = 6.1136646e-05, Final residual = 2.5869284e-06, No Iterations 3
+GAMG:  Solving for p, Initial residual = 6.2293174e-06, Final residual = 1.1476045e-07, No Iterations 3
+time step continuity errors : sum local = 3.7665655e-07, global = -8.1999599e-08, cumulative = -5.7822744e-06
+ExecutionTime = 19.86 s  ClockTime = 20 s
+
+scalarTransport execute: T
+smoothSolver:  Solving for T, Initial residual = 0.0016437377, Final residual = 0.00013954127, No Iterations 4
+scalarTransport: T: T is converged.
+	initial-residual tolerance: 1
+	outer iteration: 1
+
+Time = 25
+
+smoothSolver:  Solving for Ux, Initial residual = 0.0015822116, Final residual = 0.00010190636, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.0066537103, Final residual = 0.00045441069, No Iterations 5
+smoothSolver:  Solving for Uz, Initial residual = 0.0056614778, Final residual = 0.00054561123, No Iterations 4
+GAMG:  Solving for p, Initial residual = 0.001000728, Final residual = 4.2148065e-05, No Iterations 2
+GAMG:  Solving for p, Initial residual = 5.7395985e-05, Final residual = 2.3770371e-06, No Iterations 3
+GAMG:  Solving for p, Initial residual = 5.1244747e-06, Final residual = 1.8420212e-07, No Iterations 3
+time step continuity errors : sum local = 6.0641136e-07, global = 1.1059512e-07, cumulative = -5.6716793e-06
+ExecutionTime = 20.75 s  ClockTime = 21 s
+
+scalarTransport execute: T
+smoothSolver:  Solving for T, Initial residual = 0.0014581143, Final residual = 0.00012228471, No Iterations 4
+scalarTransport: T: T is converged.
+	initial-residual tolerance: 1
+	outer iteration: 1
+
+Time = 26
+
+smoothSolver:  Solving for Ux, Initial residual = 0.0013775, Final residual = 8.7935722e-05, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.005884206, Final residual = 0.00040769204, No Iterations 5
+smoothSolver:  Solving for Uz, Initial residual = 0.0050189596, Final residual = 0.00047003069, No Iterations 4
+GAMG:  Solving for p, Initial residual = 0.00087804989, Final residual = 3.7051283e-05, No Iterations 2
+GAMG:  Solving for p, Initial residual = 4.9757176e-05, Final residual = 2.1045084e-06, No Iterations 3
+GAMG:  Solving for p, Initial residual = 4.5479345e-06, Final residual = 1.2948683e-07, No Iterations 3
+time step continuity errors : sum local = 4.2776329e-07, global = 1.7330113e-08, cumulative = -5.6543492e-06
+ExecutionTime = 21.66 s  ClockTime = 21 s
+
+scalarTransport execute: T
+smoothSolver:  Solving for T, Initial residual = 0.0012920281, Final residual = 0.00010715642, No Iterations 4
+scalarTransport: T: T is converged.
+	initial-residual tolerance: 1
+	outer iteration: 1
+
+Time = 27
+
+smoothSolver:  Solving for Ux, Initial residual = 0.0012024591, Final residual = 7.5696862e-05, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.0052426274, Final residual = 0.00036575081, No Iterations 5
+smoothSolver:  Solving for Uz, Initial residual = 0.0043551932, Final residual = 0.00039667224, No Iterations 4
+GAMG:  Solving for p, Initial residual = 0.00076868327, Final residual = 3.1811028e-05, No Iterations 2
+GAMG:  Solving for p, Initial residual = 4.2486403e-05, Final residual = 1.8710942e-06, No Iterations 3
+GAMG:  Solving for p, Initial residual = 4.0657735e-06, Final residual = 1.100198e-07, No Iterations 3
+time step continuity errors : sum local = 3.6470624e-07, global = 6.8603293e-09, cumulative = -5.6474889e-06
+ExecutionTime = 22.4 s  ClockTime = 22 s
+
+scalarTransport execute: T
+smoothSolver:  Solving for T, Initial residual = 0.0011442246, Final residual = 9.3907586e-05, No Iterations 4
+scalarTransport: T: T is converged.
+	initial-residual tolerance: 1
+	outer iteration: 1
+
+Time = 28
+
+smoothSolver:  Solving for Ux, Initial residual = 0.0010505091, Final residual = 6.4856633e-05, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.0047137858, Final residual = 0.00032764483, No Iterations 5
+smoothSolver:  Solving for Uz, Initial residual = 0.0037203351, Final residual = 0.00033090286, No Iterations 4
+GAMG:  Solving for p, Initial residual = 0.00067046567, Final residual = 2.7035866e-05, No Iterations 2
+GAMG:  Solving for p, Initial residual = 3.6079609e-05, Final residual = 1.6440655e-06, No Iterations 3
+GAMG:  Solving for p, Initial residual = 3.5892248e-06, Final residual = 9.4372728e-08, No Iterations 3
+time step continuity errors : sum local = 3.1386771e-07, global = 3.1743717e-09, cumulative = -5.6443145e-06
+ExecutionTime = 23.19 s  ClockTime = 23 s
+
+scalarTransport execute: T
+smoothSolver:  Solving for T, Initial residual = 0.001012919, Final residual = 8.2297495e-05, No Iterations 4
+scalarTransport: T: T is converged.
+	initial-residual tolerance: 1
+	outer iteration: 1
+
+Time = 29
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00091635199, Final residual = 5.519414e-05, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.0042751582, Final residual = 0.00029259594, No Iterations 5
+smoothSolver:  Solving for Uz, Initial residual = 0.0031419345, Final residual = 0.00027529974, No Iterations 4
+GAMG:  Solving for p, Initial residual = 0.00058357477, Final residual = 2.2749035e-05, No Iterations 2
+GAMG:  Solving for p, Initial residual = 3.0470544e-05, Final residual = 1.372924e-06, No Iterations 3
+GAMG:  Solving for p, Initial residual = 3.081335e-06, Final residual = 8.096202e-08, No Iterations 3
+time step continuity errors : sum local = 2.7008506e-07, global = 9.6454433e-09, cumulative = -5.6346691e-06
+ExecutionTime = 23.89 s  ClockTime = 24 s
+
+scalarTransport execute: T
+smoothSolver:  Solving for T, Initial residual = 0.00089606854, Final residual = 7.210414e-05, No Iterations 4
+scalarTransport: T: T is converged.
+	initial-residual tolerance: 1
+	outer iteration: 1
+
+Time = 30
+
+smoothSolver:  Solving for Ux, Initial residual = 0.0007958034, Final residual = 4.6614055e-05, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.0039010103, Final residual = 0.00025987431, No Iterations 5
+smoothSolver:  Solving for Uz, Initial residual = 0.0026366446, Final residual = 0.00023068515, No Iterations 4
+GAMG:  Solving for p, Initial residual = 0.0005083979, Final residual = 1.9134479e-05, No Iterations 2
+GAMG:  Solving for p, Initial residual = 2.5765686e-05, Final residual = 1.1668784e-06, No Iterations 3
+GAMG:  Solving for p, Initial residual = 2.6385498e-06, Final residual = 6.8002775e-08, No Iterations 3
+time step continuity errors : sum local = 2.2747146e-07, global = 6.867345e-09, cumulative = -5.6278017e-06
+ExecutionTime = 24.66 s  ClockTime = 24 s
+
+scalarTransport execute: T
+smoothSolver:  Solving for T, Initial residual = 0.00079166387, Final residual = 6.3128362e-05, No Iterations 4
+scalarTransport: T: T is converged.
+	initial-residual tolerance: 1
+	outer iteration: 1
+
+Time = 31
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00068692831, Final residual = 3.9071686e-05, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.0035615104, Final residual = 0.00022891515, No Iterations 5
+smoothSolver:  Solving for Uz, Initial residual = 0.0022139645, Final residual = 0.00019694499, No Iterations 4
+GAMG:  Solving for p, Initial residual = 0.00044467212, Final residual = 1.6236641e-05, No Iterations 2
+GAMG:  Solving for p, Initial residual = 2.1957518e-05, Final residual = 1.0363699e-06, No Iterations 3
+GAMG:  Solving for p, Initial residual = 2.2869012e-06, Final residual = 5.7391668e-08, No Iterations 3
+time step continuity errors : sum local = 1.924369e-07, global = -1.7702163e-09, cumulative = -5.6295719e-06
+ExecutionTime = 25.42 s  ClockTime = 25 s
+
+scalarTransport execute: T
+smoothSolver:  Solving for T, Initial residual = 0.0006979618, Final residual = 5.5203393e-05, No Iterations 4
+scalarTransport: T: T is converged.
+	initial-residual tolerance: 1
+	outer iteration: 1
+
+Time = 32
+
+smoothSolver:  Solving for Ux, Initial residual = 0.0005889334, Final residual = 5.7540719e-05, No Iterations 4
+smoothSolver:  Solving for Uy, Initial residual = 0.0032371203, Final residual = 0.00019941025, No Iterations 5
+smoothSolver:  Solving for Uz, Initial residual = 0.0018767685, Final residual = 0.00017247366, No Iterations 4
+GAMG:  Solving for p, Initial residual = 0.00038468168, Final residual = 1.286843e-05, No Iterations 2
+GAMG:  Solving for p, Initial residual = 1.7717298e-05, Final residual = 4.0005928e-07, No Iterations 4
+GAMG:  Solving for p, Initial residual = 1.5461462e-06, Final residual = 5.9832357e-08, No Iterations 2
+time step continuity errors : sum local = 2.0101544e-07, global = -5.7947108e-08, cumulative = -5.687519e-06
+ExecutionTime = 26.12 s  ClockTime = 26 s
+
+scalarTransport execute: T
+smoothSolver:  Solving for T, Initial residual = 0.00061234571, Final residual = 4.8110554e-05, No Iterations 4
+scalarTransport: T: T is converged.
+	initial-residual tolerance: 1
+	outer iteration: 1
+
+Time = 33
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00050526623, Final residual = 4.8214085e-05, No Iterations 4
+smoothSolver:  Solving for Uy, Initial residual = 0.0028483525, Final residual = 0.00016698005, No Iterations 5
+smoothSolver:  Solving for Uz, Initial residual = 0.0016044642, Final residual = 0.00015023278, No Iterations 4
+GAMG:  Solving for p, Initial residual = 0.00034384578, Final residual = 1.1453558e-05, No Iterations 2
+GAMG:  Solving for p, Initial residual = 1.5684573e-05, Final residual = 3.8701665e-07, No Iterations 4
+GAMG:  Solving for p, Initial residual = 1.4062335e-06, Final residual = 5.3343277e-08, No Iterations 2
+time step continuity errors : sum local = 1.7953582e-07, global = -4.7386894e-08, cumulative = -5.7349059e-06
+ExecutionTime = 26.83 s  ClockTime = 27 s
+
+scalarTransport execute: T
+smoothSolver:  Solving for T, Initial residual = 0.00053523156, Final residual = 4.1864019e-05, No Iterations 4
+scalarTransport: T: T is converged.
+	initial-residual tolerance: 1
+	outer iteration: 1
+
+Time = 34
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00043054549, Final residual = 4.0266137e-05, No Iterations 4
+smoothSolver:  Solving for Uy, Initial residual = 0.0025231877, Final residual = 0.00025114011, No Iterations 4
+smoothSolver:  Solving for Uz, Initial residual = 0.001415238, Final residual = 0.00013392319, No Iterations 4
+GAMG:  Solving for p, Initial residual = 0.00031045167, Final residual = 1.0072545e-05, No Iterations 2
+GAMG:  Solving for p, Initial residual = 1.3797985e-05, Final residual = 4.0752458e-07, No Iterations 4
+GAMG:  Solving for p, Initial residual = 1.3000073e-06, Final residual = 5.8740424e-08, No Iterations 2
+time step continuity errors : sum local = 1.980148e-07, global = -3.6728742e-09, cumulative = -5.7385788e-06
+ExecutionTime = 27.52 s  ClockTime = 27 s
+
+scalarTransport execute: T
+smoothSolver:  Solving for T, Initial residual = 0.00046567962, Final residual = 3.6364805e-05, No Iterations 4
+scalarTransport: T: T is converged.
+	initial-residual tolerance: 1
+	outer iteration: 1
+
+Time = 35
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00036451063, Final residual = 3.3670516e-05, No Iterations 4
+smoothSolver:  Solving for Uy, Initial residual = 0.0022691681, Final residual = 0.00022003071, No Iterations 4
+smoothSolver:  Solving for Uz, Initial residual = 0.0012663744, Final residual = 0.00012052196, No Iterations 4
+GAMG:  Solving for p, Initial residual = 0.00027094752, Final residual = 8.2799774e-06, No Iterations 2
+GAMG:  Solving for p, Initial residual = 1.1514109e-05, Final residual = 3.905251e-07, No Iterations 4
+GAMG:  Solving for p, Initial residual = 1.1633695e-06, Final residual = 5.8027023e-08, No Iterations 2
+time step continuity errors : sum local = 1.9587373e-07, global = 2.2308932e-08, cumulative = -5.7162699e-06
+ExecutionTime = 28.18 s  ClockTime = 28 s
+
+scalarTransport execute: T
+smoothSolver:  Solving for T, Initial residual = 0.00040410727, Final residual = 3.1517893e-05, No Iterations 4
+scalarTransport: T: T is converged.
+	initial-residual tolerance: 1
+	outer iteration: 1
+
+Time = 36
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00030766886, Final residual = 2.8241234e-05, No Iterations 4
+smoothSolver:  Solving for Uy, Initial residual = 0.0019813307, Final residual = 0.00018737991, No Iterations 4
+smoothSolver:  Solving for Uz, Initial residual = 0.0011399568, Final residual = 0.00010721355, No Iterations 4
+GAMG:  Solving for p, Initial residual = 0.00023857873, Final residual = 6.9307747e-06, No Iterations 2
+GAMG:  Solving for p, Initial residual = 9.7512649e-06, Final residual = 4.8608815e-07, No Iterations 3
+GAMG:  Solving for p, Initial residual = 1.0898073e-06, Final residual = 7.0021232e-08, No Iterations 3
+time step continuity errors : sum local = 2.366323e-07, global = 8.8218765e-08, cumulative = -5.6280511e-06
+ExecutionTime = 28.92 s  ClockTime = 29 s
+
+scalarTransport execute: T
+smoothSolver:  Solving for T, Initial residual = 0.0003494927, Final residual = 2.7245843e-05, No Iterations 4
+scalarTransport: T: T is converged.
+	initial-residual tolerance: 1
+	outer iteration: 1
+
+Time = 37
+
+smoothSolver:  Solving for Ux, Initial residual = 0.0002594709, Final residual = 2.3788034e-05, No Iterations 4
+smoothSolver:  Solving for Uy, Initial residual = 0.0017001246, Final residual = 0.00015745444, No Iterations 4
+smoothSolver:  Solving for Uz, Initial residual = 0.0010220343, Final residual = 9.3586653e-05, No Iterations 4
+GAMG:  Solving for p, Initial residual = 0.00021065767, Final residual = 5.8306673e-06, No Iterations 2
+GAMG:  Solving for p, Initial residual = 8.2983257e-06, Final residual = 1.8151223e-07, No Iterations 4
+GAMG:  Solving for p, Initial residual = 7.8114632e-07, Final residual = 6.0516934e-08, No Iterations 2
+time step continuity errors : sum local = 2.0473693e-07, global = 9.24073e-08, cumulative = -5.5356438e-06
+ExecutionTime = 29.64 s  ClockTime = 29 s
+
+scalarTransport execute: T
+smoothSolver:  Solving for T, Initial residual = 0.00030115309, Final residual = 2.3488573e-05, No Iterations 4
+scalarTransport: T: T is converged.
+	initial-residual tolerance: 1
+	outer iteration: 1
+
+Time = 38
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00021884914, Final residual = 2.0140475e-05, No Iterations 4
+smoothSolver:  Solving for Uy, Initial residual = 0.001440785, Final residual = 0.00013135305, No Iterations 4
+smoothSolver:  Solving for Uz, Initial residual = 0.0009057745, Final residual = 8.0032642e-05, No Iterations 4
+GAMG:  Solving for p, Initial residual = 0.00018643857, Final residual = 4.9641998e-06, No Iterations 2
+GAMG:  Solving for p, Initial residual = 7.1293875e-06, Final residual = 1.0145286e-07, No Iterations 4
+GAMG:  Solving for p, Initial residual = 6.4016292e-07, Final residual = 5.3368819e-08, No Iterations 1
+time step continuity errors : sum local = 1.8072317e-07, global = -5.6411974e-08, cumulative = -5.5920558e-06
+ExecutionTime = 30.34 s  ClockTime = 30 s
+
+scalarTransport execute: T
+smoothSolver:  Solving for T, Initial residual = 0.00025855483, Final residual = 2.0191773e-05, No Iterations 4
+scalarTransport: T: T is converged.
+	initial-residual tolerance: 1
+	outer iteration: 1
+
+Time = 39
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00018482524, Final residual = 1.715999e-05, No Iterations 4
+smoothSolver:  Solving for Uy, Initial residual = 0.0012092482, Final residual = 0.00010895137, No Iterations 4
+smoothSolver:  Solving for Uz, Initial residual = 0.0007909781, Final residual = 6.713903e-05, No Iterations 4
+GAMG:  Solving for p, Initial residual = 0.00016537467, Final residual = 4.2455418e-06, No Iterations 2
+GAMG:  Solving for p, Initial residual = 6.1504351e-06, Final residual = 2.7678529e-07, No Iterations 3
+GAMG:  Solving for p, Initial residual = 7.3193544e-07, Final residual = 8.9994538e-08, No Iterations 1
+time step continuity errors : sum local = 3.049976e-07, global = -1.4180952e-08, cumulative = -5.6062367e-06
+ExecutionTime = 31.03 s  ClockTime = 31 s
+
+scalarTransport execute: T
+smoothSolver:  Solving for T, Initial residual = 0.00022122235, Final residual = 1.7308297e-05, No Iterations 4
+scalarTransport: T: T is converged.
+	initial-residual tolerance: 1
+	outer iteration: 1
+
+Time = 40
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00015657025, Final residual = 1.4726618e-05, No Iterations 4
+smoothSolver:  Solving for Uy, Initial residual = 0.0010068476, Final residual = 9.0051448e-05, No Iterations 4
+smoothSolver:  Solving for Uz, Initial residual = 0.00067992293, Final residual = 5.532922e-05, No Iterations 4
+GAMG:  Solving for p, Initial residual = 0.00014689946, Final residual = 3.624769e-06, No Iterations 2
+GAMG:  Solving for p, Initial residual = 5.3052426e-06, Final residual = 2.2918984e-07, No Iterations 3
+GAMG:  Solving for p, Initial residual = 6.2102531e-07, Final residual = 7.5475988e-08, No Iterations 1
+time step continuity errors : sum local = 2.559733e-07, global = -1.1799606e-08, cumulative = -5.6180363e-06
+ExecutionTime = 31.69 s  ClockTime = 32 s
+
+scalarTransport execute: T
+smoothSolver:  Solving for T, Initial residual = 0.0001887138, Final residual = 1.4797872e-05, No Iterations 4
+scalarTransport: T: T is converged.
+	initial-residual tolerance: 1
+	outer iteration: 1
+
+Time = 41
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00013327536, Final residual = 1.2739591e-05, No Iterations 4
+smoothSolver:  Solving for Uy, Initial residual = 0.00083325363, Final residual = 7.4387795e-05, No Iterations 4
+smoothSolver:  Solving for Uz, Initial residual = 0.00057594095, Final residual = 4.4850204e-05, No Iterations 4
+GAMG:  Solving for p, Initial residual = 0.00013062674, Final residual = 3.1039218e-06, No Iterations 2
+GAMG:  Solving for p, Initial residual = 4.5877975e-06, Final residual = 2.0162049e-07, No Iterations 3
+GAMG:  Solving for p, Initial residual = 5.3921696e-07, Final residual = 6.6424797e-08, No Iterations 1
+time step continuity errors : sum local = 2.2541194e-07, global = -1.1203188e-08, cumulative = -5.6292395e-06
+ExecutionTime = 32.35 s  ClockTime = 32 s
+
+scalarTransport execute: T
+smoothSolver:  Solving for T, Initial residual = 0.00016058937, Final residual = 1.2621793e-05, No Iterations 4
+scalarTransport: T: T is converged.
+	initial-residual tolerance: 1
+	outer iteration: 1
+
+Time = 42
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00011420925, Final residual = 1.1107317e-05, No Iterations 4
+smoothSolver:  Solving for Uy, Initial residual = 0.00068719278, Final residual = 6.1574965e-05, No Iterations 4
+smoothSolver:  Solving for Uz, Initial residual = 0.00048174987, Final residual = 3.5822549e-05, No Iterations 4
+GAMG:  Solving for p, Initial residual = 0.00011645998, Final residual = 2.7135341e-06, No Iterations 2
+GAMG:  Solving for p, Initial residual = 4.0275162e-06, Final residual = 1.9041028e-07, No Iterations 3
+GAMG:  Solving for p, Initial residual = 4.8012751e-07, Final residual = 6.1198806e-08, No Iterations 1
+time step continuity errors : sum local = 2.0778274e-07, global = -1.0308025e-08, cumulative = -5.6395476e-06
+ExecutionTime = 33.05 s  ClockTime = 33 s
+
+scalarTransport execute: T
+smoothSolver:  Solving for T, Initial residual = 0.0001364157, Final residual = 1.0743884e-05, No Iterations 4
+scalarTransport: T: T is converged.
+	initial-residual tolerance: 1
+	outer iteration: 1
+
+Time = 43
+
+smoothSolver:  Solving for Ux, Initial residual = 9.8553013e-05, Final residual = 9.7562138e-06, No Iterations 4
+smoothSolver:  Solving for Uy, Initial residual = 0.00056645649, Final residual = 5.1230631e-05, No Iterations 4
+smoothSolver:  Solving for Uz, Initial residual = 0.00039883098, Final residual = 2.8245396e-05, No Iterations 4
+GAMG:  Solving for p, Initial residual = 0.00010409126, Final residual = 2.4289483e-06, No Iterations 2
+GAMG:  Solving for p, Initial residual = 3.5950034e-06, Final residual = 5.7865729e-08, No Iterations 4
+GAMG:  Solving for p, Initial residual = 3.152733e-07, Final residual = 3.3127925e-08, No Iterations 1
+time step continuity errors : sum local = 1.125237e-07, global = -1.6803894e-08, cumulative = -5.6563515e-06
+ExecutionTime = 33.74 s  ClockTime = 34 s
+
+scalarTransport execute: T
+smoothSolver:  Solving for T, Initial residual = 0.00011576399, Final residual = 9.1301964e-06, No Iterations 4
+scalarTransport: T: T is converged.
+	initial-residual tolerance: 1
+	outer iteration: 1
+
+Time = 44
+
+smoothSolver:  Solving for Ux, Initial residual = 8.5669376e-05, Final residual = 5.0142002e-06, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.00046830411, Final residual = 4.297607e-05, No Iterations 4
+smoothSolver:  Solving for Uz, Initial residual = 0.00032765817, Final residual = 2.2039502e-05, No Iterations 4
+GAMG:  Solving for p, Initial residual = 9.3774821e-05, Final residual = 2.2977139e-06, No Iterations 2
+GAMG:  Solving for p, Initial residual = 3.3454712e-06, Final residual = 5.3998468e-08, No Iterations 4
+GAMG:  Solving for p, Initial residual = 2.9746351e-07, Final residual = 2.9579717e-08, No Iterations 1
+time step continuity errors : sum local = 1.0050929e-07, global = -1.5058243e-08, cumulative = -5.6714097e-06
+ExecutionTime = 34.42 s  ClockTime = 34 s
+
+scalarTransport execute: T
+smoothSolver:  Solving for T, Initial residual = 9.8351563e-05, Final residual = 7.7596589e-06, No Iterations 4
+scalarTransport: T: T is converged.
+	initial-residual tolerance: 1
+	outer iteration: 1
+
+Time = 45
+
+smoothSolver:  Solving for Ux, Initial residual = 7.4652058e-05, Final residual = 4.450893e-06, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.00039818973, Final residual = 3.7494978e-05, No Iterations 4
+smoothSolver:  Solving for Uz, Initial residual = 0.000270566, Final residual = 1.7371493e-05, No Iterations 4
+GAMG:  Solving for p, Initial residual = 8.3504633e-05, Final residual = 1.9426009e-06, No Iterations 2
+GAMG:  Solving for p, Initial residual = 2.8692624e-06, Final residual = 1.162752e-07, No Iterations 3
+GAMG:  Solving for p, Initial residual = 2.876737e-07, Final residual = 8.0436097e-08, No Iterations 1
+time step continuity errors : sum local = 2.7339208e-07, global = 1.177183e-07, cumulative = -5.5536914e-06
+ExecutionTime = 35.1 s  ClockTime = 35 s
+
+scalarTransport execute: T
+smoothSolver:  Solving for T, Initial residual = 8.3605133e-05, Final residual = 6.5875316e-06, No Iterations 4
+scalarTransport: T: T is converged.
+	initial-residual tolerance: 1
+	outer iteration: 1
+
+Time = 46
+
+smoothSolver:  Solving for Ux, Initial residual = 6.5522509e-05, Final residual = 3.961181e-06, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.00033552695, Final residual = 3.2316196e-05, No Iterations 4
+smoothSolver:  Solving for Uz, Initial residual = 0.00022081755, Final residual = 1.3477733e-05, No Iterations 4
+GAMG:  Solving for p, Initial residual = 7.4713581e-05, Final residual = 1.6456737e-06, No Iterations 2
+GAMG:  Solving for p, Initial residual = 2.466132e-06, Final residual = 8.4741431e-08, No Iterations 3
+GAMG:  Solving for p, Initial residual = 2.3800398e-07, Final residual = 4.7583468e-08, No Iterations 1
+time step continuity errors : sum local = 1.6176925e-07, global = 4.2054345e-08, cumulative = -5.5116371e-06
+ExecutionTime = 35.77 s  ClockTime = 36 s
+
+scalarTransport execute: T
+smoothSolver:  Solving for T, Initial residual = 7.113367e-05, Final residual = 5.5877253e-06, No Iterations 4
+scalarTransport: T: T is converged.
+	initial-residual tolerance: 1
+	outer iteration: 1
+
+Time = 47
+
+smoothSolver:  Solving for Ux, Initial residual = 5.7888559e-05, Final residual = 3.532153e-06, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.00028460848, Final residual = 2.8025766e-05, No Iterations 4
+smoothSolver:  Solving for Uz, Initial residual = 0.00017987417, Final residual = 1.0476571e-05, No Iterations 4
+GAMG:  Solving for p, Initial residual = 6.6962966e-05, Final residual = 1.3708431e-06, No Iterations 2
+GAMG:  Solving for p, Initial residual = 2.099676e-06, Final residual = 6.622063e-08, No Iterations 3
+GAMG:  Solving for p, Initial residual = 1.9919036e-07, Final residual = 3.4829632e-08, No Iterations 1
+time step continuity errors : sum local = 1.1843273e-07, global = 2.6375122e-08, cumulative = -5.4852619e-06
+ExecutionTime = 36.43 s  ClockTime = 36 s
+
+scalarTransport execute: T
+smoothSolver:  Solving for T, Initial residual = 6.0602429e-05, Final residual = 4.7367282e-06, No Iterations 4
+scalarTransport: T: T is converged.
+	initial-residual tolerance: 1
+	outer iteration: 1
+
+Time = 48
+
+smoothSolver:  Solving for Ux, Initial residual = 5.1406944e-05, Final residual = 3.1528775e-06, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.00024429615, Final residual = 1.4368802e-05, No Iterations 5
+smoothSolver:  Solving for Uz, Initial residual = 0.00014741709, Final residual = 8.2879763e-06, No Iterations 4
+GAMG:  Solving for p, Initial residual = 6.0165862e-05, Final residual = 1.0889631e-06, No Iterations 2
+GAMG:  Solving for p, Initial residual = 1.7314619e-06, Final residual = 4.7079072e-08, No Iterations 3
+GAMG:  Solving for p, Initial residual = 1.5767967e-07, Final residual = 2.4011523e-08, No Iterations 1
+time step continuity errors : sum local = 8.1659987e-08, global = 1.5699665e-08, cumulative = -5.4695623e-06
+ExecutionTime = 37.13 s  ClockTime = 37 s
+
+scalarTransport execute: T
+smoothSolver:  Solving for T, Initial residual = 5.175079e-05, Final residual = 4.0132713e-06, No Iterations 4
+scalarTransport: T: T is converged.
+	initial-residual tolerance: 1
+	outer iteration: 1
+
+Time = 49
+
+smoothSolver:  Solving for Ux, Initial residual = 4.5900068e-05, Final residual = 2.8127805e-06, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.00020636597, Final residual = 1.2276142e-05, No Iterations 5
+smoothSolver:  Solving for Uz, Initial residual = 0.00012221042, Final residual = 1.1912294e-05, No Iterations 3
+GAMG:  Solving for p, Initial residual = 5.388049e-05, Final residual = 9.9751394e-07, No Iterations 2
+GAMG:  Solving for p, Initial residual = 1.5725438e-06, Final residual = 4.7044072e-08, No Iterations 3
+GAMG:  Solving for p, Initial residual = 1.4844332e-07, Final residual = 2.5519123e-08, No Iterations 1
+time step continuity errors : sum local = 8.6798161e-08, global = 2.0236879e-08, cumulative = -5.4493254e-06
+ExecutionTime = 37.81 s  ClockTime = 38 s
+
+scalarTransport execute: T
+smoothSolver:  Solving for T, Initial residual = 4.424114e-05, Final residual = 3.3991245e-06, No Iterations 4
+scalarTransport: T: T is converged.
+	initial-residual tolerance: 1
+	outer iteration: 1
+
+Time = 50
+
+smoothSolver:  Solving for Ux, Initial residual = 4.1056279e-05, Final residual = 2.5092018e-06, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.00018019901, Final residual = 1.0869171e-05, No Iterations 5
+smoothSolver:  Solving for Uz, Initial residual = 0.00010538217, Final residual = 1.0374942e-05, No Iterations 3
+GAMG:  Solving for p, Initial residual = 4.8435523e-05, Final residual = 8.8678238e-07, No Iterations 2
+GAMG:  Solving for p, Initial residual = 1.4013043e-06, Final residual = 4.2696534e-08, No Iterations 3
+GAMG:  Solving for p, Initial residual = 1.318563e-07, Final residual = 2.5696226e-08, No Iterations 1
+time step continuity errors : sum local = 8.7409529e-08, global = 2.6741766e-08, cumulative = -5.4225836e-06
+ExecutionTime = 38.49 s  ClockTime = 38 s
+
+scalarTransport execute: T
+smoothSolver:  Solving for T, Initial residual = 3.7878554e-05, Final residual = 2.8784721e-06, No Iterations 4
+scalarTransport: T: T is converged.
+	initial-residual tolerance: 1
+	outer iteration: 1
+
+volFieldValue peakTemperature write:
+    max(region0) of T = 349.01464
+
+Time = 51
+
+smoothSolver:  Solving for Ux, Initial residual = 3.6748235e-05, Final residual = 2.23496e-06, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.00015993062, Final residual = 9.736495e-06, No Iterations 5
+smoothSolver:  Solving for Uz, Initial residual = 9.117747e-05, Final residual = 9.0136933e-06, No Iterations 3
+GAMG:  Solving for p, Initial residual = 4.3596734e-05, Final residual = 7.7133862e-07, No Iterations 2
+GAMG:  Solving for p, Initial residual = 1.230527e-06, Final residual = 3.8323344e-08, No Iterations 3
+GAMG:  Solving for p, Initial residual = 1.1560365e-07, Final residual = 2.4010664e-08, No Iterations 1
+time step continuity errors : sum local = 8.1682705e-08, global = 3.1548342e-08, cumulative = -5.3910353e-06
+ExecutionTime = 39.16 s  ClockTime = 39 s
+
+scalarTransport execute: T
+smoothSolver:  Solving for T, Initial residual = 3.2475746e-05, Final residual = 2.4373352e-06, No Iterations 4
+scalarTransport: T: T is converged.
+	initial-residual tolerance: 1
+	outer iteration: 1
+
+Time = 52
+
+smoothSolver:  Solving for Ux, Initial residual = 3.2878603e-05, Final residual = 1.9866742e-06, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.00014332252, Final residual = 8.7606743e-06, No Iterations 5
+smoothSolver:  Solving for Uz, Initial residual = 7.9684976e-05, Final residual = 7.9413201e-06, No Iterations 3
+GAMG:  Solving for p, Initial residual = 3.928804e-05, Final residual = 6.6618514e-07, No Iterations 2
+GAMG:  Solving for p, Initial residual = 1.0755911e-06, Final residual = 5.3185726e-08, No Iterations 3
+GAMG:  Solving for p, Initial residual = 1.210167e-07, Final residual = 2.737614e-08, No Iterations 1
+time step continuity errors : sum local = 9.3138423e-08, global = 1.1137773e-09, cumulative = -5.3899215e-06
+ExecutionTime = 39.85 s  ClockTime = 40 s
+
+scalarTransport execute: T
+smoothSolver:  Solving for T, Initial residual = 2.787398e-05, Final residual = 2.0637257e-06, No Iterations 4
+scalarTransport: T: T is converged.
+	initial-residual tolerance: 1
+	outer iteration: 1
+
+Time = 53
+
+smoothSolver:  Solving for Ux, Initial residual = 2.9390063e-05, Final residual = 1.7621129e-06, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.00012923849, Final residual = 7.8941626e-06, No Iterations 5
+smoothSolver:  Solving for Uz, Initial residual = 7.0540773e-05, Final residual = 4.1975661e-06, No Iterations 4
+GAMG:  Solving for p, Initial residual = 3.5484388e-05, Final residual = 5.7755373e-07, No Iterations 2
+GAMG:  Solving for p, Initial residual = 9.4242705e-07, Final residual = 9.3565622e-08, No Iterations 2
+GAMG:  Solving for p, Initial residual = 1.446382e-07, Final residual = 5.2814508e-08, No Iterations 1
+time step continuity errors : sum local = 1.796944e-07, global = 8.7429095e-09, cumulative = -5.3811786e-06
+ExecutionTime = 40.55 s  ClockTime = 40 s
+
+scalarTransport execute: T
+smoothSolver:  Solving for T, Initial residual = 2.3938138e-05, Final residual = 1.7469327e-06, No Iterations 4
+scalarTransport: T: T is converged.
+	initial-residual tolerance: 1
+	outer iteration: 1
+
+Time = 54
+
+smoothSolver:  Solving for Ux, Initial residual = 2.6221044e-05, Final residual = 1.5582452e-06, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.00011661971, Final residual = 7.086653e-06, No Iterations 5
+smoothSolver:  Solving for Uz, Initial residual = 6.1642131e-05, Final residual = 6.0753402e-06, No Iterations 3
+GAMG:  Solving for p, Initial residual = 3.205721e-05, Final residual = 4.9045581e-07, No Iterations 2
+GAMG:  Solving for p, Initial residual = 8.1428607e-07, Final residual = 6.0595109e-08, No Iterations 2
+GAMG:  Solving for p, Initial residual = 1.0432136e-07, Final residual = 3.7375782e-08, No Iterations 1
+time step continuity errors : sum local = 1.2717265e-07, global = 4.2259763e-08, cumulative = -5.3389188e-06
+ExecutionTime = 41.23 s  ClockTime = 41 s
+
+scalarTransport execute: T
+smoothSolver:  Solving for T, Initial residual = 2.0569374e-05, Final residual = 1.4792308e-06, No Iterations 4
+scalarTransport: T: T is converged.
+	initial-residual tolerance: 1
+	outer iteration: 1
+
+Time = 55
+
+smoothSolver:  Solving for Ux, Initial residual = 2.3353839e-05, Final residual = 1.375605e-06, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 0.00010583664, Final residual = 6.3870898e-06, No Iterations 5
+smoothSolver:  Solving for Uz, Initial residual = 5.6408221e-05, Final residual = 3.4063901e-06, No Iterations 4
+GAMG:  Solving for p, Initial residual = 2.899164e-05, Final residual = 4.0054576e-07, No Iterations 2
+GAMG:  Solving for p, Initial residual = 6.8963187e-07, Final residual = 4.7222186e-08, No Iterations 2
+GAMG:  Solving for p, Initial residual = 8.3589082e-08, Final residual = 8.3589082e-08, No Iterations 0
+time step continuity errors : sum local = 2.8442773e-07, global = -7.3020981e-08, cumulative = -5.4119398e-06
+ExecutionTime = 41.91 s  ClockTime = 42 s
+
+scalarTransport execute: T
+smoothSolver:  Solving for T, Initial residual = 1.7675935e-05, Final residual = 1.2523558e-06, No Iterations 4
+scalarTransport: T: T is converged.
+	initial-residual tolerance: 1
+	outer iteration: 1
+
+Time = 56
+
+smoothSolver:  Solving for Ux, Initial residual = 2.0744342e-05, Final residual = 1.2120624e-06, No Iterations 5
+smoothSolver:  Solving for Uy, Initial residual = 9.5824482e-05, Final residual = 5.725439e-06, No Iterations 5
+smoothSolver:  Solving for Uz, Initial residual = 5.0119462e-05, Final residual = 5.0113766e-06, No Iterations 3
+GAMG:  Solving for p, Initial residual = 2.6176717e-05, Final residual = 3.9435088e-07, No Iterations 2
+GAMG:  Solving for p, Initial residual = 6.5026753e-07, Final residual = 4.8610211e-08, No Iterations 2
+GAMG:  Solving for p, Initial residual = 8.6631038e-08, Final residual = 8.6631038e-08, No Iterations 0
+time step continuity errors : sum local = 2.9479036e-07, global = -7.1461283e-08, cumulative = -5.4834011e-06
+ExecutionTime = 42.55 s  ClockTime = 42 s
+
+
+SIMPLE solution converged in 56 iterations
+
+scalarTransport execute: T
+smoothSolver:  Solving for T, Initial residual = 1.5187701e-05, Final residual = 1.0606254e-06, No Iterations 4
+scalarTransport: T: T is converged.
+	initial-residual tolerance: 1
+	outer iteration: 1
+
+scalarTransport write: T
+	T
+
+End
+

@@ -1,0 +1,16 @@
+ERROR: In vtkADIOS2CoreImageReader.cxx, line 496
+vtkADIOS2CoreImageReader (000002249C9BCDF0): No inquire variable is specified. Abort reading now
+
+ERROR: In vtkExecutive.cxx, line 730
+vtkPVCompositeDataPipeline (000002249B8E53B0): Algorithm vtkADIOS2CoreImageReader (000002249C9BCDF0) returned failure for request: vtkInformation (00000224AC29EB50)
+  Debug: Off
+  Modified Time: 544891
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  ALGORITHM_AFTER_FORWARD: 1
+  FROM_OUTPUT_PORT: 0
+
+
+

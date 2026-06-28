@@ -1,0 +1,458 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2412                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _b8cf4d35-20260127 OPENFOAM=2412 patch=260127 version=2412
+Arch   : "LSB;label=32;scalar=64"
+Exec   : snappyHexMesh -overwrite
+Date   : Jun 12 2026
+Time   : 18:10:08
+Host   : LAPTOP-8OT81PN8
+PID    : 5461
+I/O    : uncollated
+Case   : /home/saidul/of_heat_sink
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+Read mesh in = 0.12 s
+
+Overall mesh bounding box  : (0 0 0) (4 1 1)
+Relative tolerance         : 1e-06
+Absolute matching distance : 4.2426407e-06
+
+Reading refinement surfaces.
+Read refinement surfaces in = 0.01 s
+
+Reading refinement shells.
+Read refinement shells in = 0 s
+
+Setting refinement level of surface to be consistent with shells.
+For geometry fins detected 0 uncached triangles out of 36
+Checked shell refinement in = 0 s
+
+Reading features.
+Read features in = 0 s
+
+
+Determining initial surface intersections
+-----------------------------------------
+
+Edge intersection testing:
+    Number of edges             : 99600
+    Number of edges to retest   : 0
+    Number of intersected edges : 0
+Edge intersection testing:
+    Number of edges             : 99600
+    Number of edges to retest   : 99600
+    Number of intersected edges : 1095
+Calculated surface intersections in = 0.1 s
+
+Initial mesh : cells:32000  faces:99600  points:35721
+Cells per refinement level:
+    0	32000
+Setting refinement level of surface to be consistent with curvature.
+Checked curvature refinement in = 0 s
+
+
+Adding patches for surface regions
+----------------------------------
+
+Patch Type                Region                        
+----- ----                ------                        
+fins:
+
+5     wall                fins                          
+
+Added patches in = 0 s
+
+Edge intersection testing:
+    Number of edges             : 99600
+    Number of edges to retest   : 0
+    Number of intersected edges : 1095
+Decomposition method none [1]
+
+Refinement phase
+----------------
+
+Found point (3.5 0.5 0.5) in cell 16790 on processor 0
+
+Surface refinement iteration 0
+------------------------------
+
+Marked for refinement due to surface intersection          : 1664 cells.
+Determined cells to refine in = 0.02 s
+Selected for refinement : 1664 cells (out of 32000)
+Edge intersection testing:
+    Number of edges             : 136902
+    Number of edges to retest   : 46670
+    Number of intersected edges : 4080
+Refined mesh in = 0.14 s
+After refinement surface refinement iteration 0 : cells:43648  faces:136902  points:49824
+Cells per refinement level:
+    0	30336
+    1	13312
+
+Surface refinement iteration 1
+------------------------------
+
+Marked for refinement due to surface intersection          : 7096 cells.
+Determined cells to refine in = 0 s
+Selected for refinement : 7264 cells (out of 43648)
+Edge intersection testing:
+    Number of edges             : 301482
+    Number of edges to retest   : 208992
+    Number of intersected edges : 16320
+Refined mesh in = 0.4 s
+After refinement surface refinement iteration 1 : cells:94496  faces:301482  points:112741
+Cells per refinement level:
+    0	30168
+    1	7560
+    2	56768
+
+Surface refinement iteration 2
+------------------------------
+
+Marked for refinement due to surface intersection          : 0 cells.
+Determined cells to refine in = 0 s
+Selected for refinement : 0 cells (out of 94496)
+Stopping refining since too few cells selected.
+
+
+Removing mesh beyond surface intersections
+------------------------------------------
+
+Setting cellZones according to locationsInMesh:
+Location : (3.5 0.5 0.5)
+    cellZone : none
+
+For cellZone none found point (3.5 0.5 0.5) in global region 0 out of 4 regions.
+--> FOAM Warning : 
+    From void Foam::meshRefinement::nearestFace(const Foam::labelUList&, const Foam::bitSet&, Foam::autoPtr<Foam::mapDistribute>&, Foam::labelList&, Foam::label) const
+    in file meshRefinement/meshRefinement.C at line 527
+    Did not visit some faces, e.g. face 0 at (0.05 0.025 0.025)
+Keeping all cells containing inside points
+Selected for keeping : 79592 cells.
+Edge intersection testing:
+    Number of edges             : 259386
+    Number of edges to retest   : 13800
+    Number of intersected edges : 16320
+
+Shell refinement iteration 0
+----------------------------
+
+Marked for refinement due to distance to explicit features : 0 cells.
+Marked for refinement due to refinement shells             : 0 cells.
+Determined cells to refine in = 0.31 s
+Selected for internal refinement : 1352 cells (out of 79592)
+Edge intersection testing:
+    Number of edges             : 288318
+    Number of edges to retest   : 78222
+    Number of intersected edges : 16320
+Refined mesh in = 0.26 s
+After refinement shell refinement iteration 0 : cells:89056  faces:288318  points:110283
+Cells per refinement level:
+    0	29224
+    1	12400
+    2	47432
+
+Shell refinement iteration 1
+----------------------------
+
+Marked for refinement due to distance to explicit features : 0 cells.
+Marked for refinement due to refinement shells             : 0 cells.
+Determined cells to refine in = 0.03 s
+Selected for internal refinement : 336 cells (out of 89056)
+Edge intersection testing:
+    Number of edges             : 295398
+    Number of edges to retest   : 22956
+    Number of intersected edges : 16320
+Refined mesh in = 0.24 s
+After refinement shell refinement iteration 1 : cells:91408  faces:295398  points:112655
+Cells per refinement level:
+    0	28888
+    1	15088
+    2	47432
+
+Shell refinement iteration 2
+----------------------------
+
+Marked for refinement due to distance to explicit features : 0 cells.
+Marked for refinement due to refinement shells             : 0 cells.
+Determined cells to refine in = 0.03 s
+Selected for internal refinement : 0 cells (out of 91408)
+Stopping refining since too few cells selected.
+
+
+Dangling coarse cells refinement iteration 0
+--------------------------------------------
+
+Determined cells to refine in = 0 s
+Selected for refinement : 0 cells (out of 91408)
+Stopping refining since too few cells selected.
+
+
+Dangling coarse cells refinement iteration 0
+--------------------------------------------
+
+Determined cells to refine in = 0.01 s
+Selected for refinement : 0 cells (out of 91408)
+Stopping refining since too few cells selected.
+
+
+Refinement transition refinement iteration 0
+--------------------------------------------
+
+Determined cells to refine in = 0 s
+Selected for refinement : 0 cells (out of 91408)
+Stopping refining since too few cells selected.
+
+
+Splitting mesh at surface intersections
+---------------------------------------
+
+Introducing baffles for 16320 faces that are intersected by the surface.
+
+Setting cellZones according to locationsInMesh:
+Location : (3.5 0.5 0.5)
+    cellZone : none
+
+For cellZone none found point (3.5 0.5 0.5) in global region 0 out of 4 regions.
+Edge intersection testing:
+    Number of edges             : 309958
+    Number of edges to retest   : 119496
+    Number of intersected edges : 30880
+Created baffles in = 0.36 s
+
+
+After introducing baffles : cells:91408  faces:309958  points:112655
+Cells per refinement level:
+    0	28888
+    1	15088
+    2	47432
+
+Introducing baffles to block off problem cells
+----------------------------------------------
+
+markFacesOnProblemCells : marked 30084 additional internal faces to be converted into baffles.
+Analyzed problem cells in = 0.34 s
+
+
+Introducing baffles to delete problem cells.
+
+Edge intersection testing:
+    Number of edges             : 340042
+    Number of edges to retest   : 90288
+    Number of intersected edges : 30880
+Created baffles in = 0.3 s
+
+
+After introducing baffles : cells:91408  faces:340042  points:112655
+Cells per refinement level:
+    0	28888
+    1	15088
+    2	47432
+Setting cellZones according to locationsInMesh:
+Location : (3.5 0.5 0.5)
+    cellZone : none
+
+For cellZone none found point (3.5 0.5 0.5) in global region 0 out of 15049 regions.
+Edge intersection testing:
+    Number of edges             : 340042
+    Number of edges to retest   : 149580
+    Number of intersected edges : 30880
+
+Remove unreachable sections of mesh
+-----------------------------------
+
+Keeping all cells containing points 1((3.5 0.5 0.5))
+Selected for keeping : 76360 cells.
+Edge intersection testing:
+    Number of edges             : 249754
+    Number of edges to retest   : 0
+    Number of intersected edges : 14560
+Split mesh in = 0.51 s
+
+
+After subsetting : cells:76360  faces:249754  points:97330
+Cells per refinement level:
+    0	28888
+    1	15088
+    2	32384
+
+Introducing zones for interfaces
+--------------------------------
+
+Setting cellZones according to locationsInMesh:
+Location : (3.5 0.5 0.5)
+    cellZone : none
+
+For cellZone none found point (3.5 0.5 0.5) in global region 0 out of 1 regions.
+Setting faceZones according to neighbouring cellZones:
+
+Edge intersection testing:
+    Number of edges             : 249754
+    Number of edges to retest   : 0
+    Number of intersected edges : 14560
+
+Handling cells with snap problems
+---------------------------------
+
+Introducing baffles for 14560 faces that are intersected by the surface.
+
+Setting cellZones according to locationsInMesh:
+Location : (3.5 0.5 0.5)
+    cellZone : none
+
+For cellZone none found point (3.5 0.5 0.5) in global region 0 out of 1 regions.
+Edge intersection testing:
+    Number of edges             : 249754
+    Number of edges to retest   : 59292
+    Number of intersected edges : 14560
+Created baffles in = 0.34 s
+
+
+After introducing baffles : cells:76360  faces:249754  points:97330
+Cells per refinement level:
+    0	28888
+    1	15088
+    2	32384
+
+Introducing baffles to block off problem cells
+----------------------------------------------
+
+markFacesOnProblemCells : marked 0 additional internal faces to be converted into baffles.
+Analyzed problem cells in = 0.09 s
+
+
+Introducing baffles to delete problem cells.
+
+Created baffles in = 0.02 s
+
+
+After introducing baffles : cells:76360  faces:249754  points:97330
+Cells per refinement level:
+    0	28888
+    1	15088
+    2	32384
+Setting cellZones according to locationsInMesh:
+Location : (3.5 0.5 0.5)
+    cellZone : none
+
+For cellZone none found point (3.5 0.5 0.5) in global region 0 out of 1 regions.
+Edge intersection testing:
+    Number of edges             : 249754
+    Number of edges to retest   : 59292
+    Number of intersected edges : 14560
+
+Remove unreachable sections of mesh
+-----------------------------------
+
+Split mesh in = 0.21 s
+
+
+After subsetting : cells:76360  faces:249754  points:97330
+Cells per refinement level:
+    0	28888
+    1	15088
+    2	32384
+
+Merge free-standing baffles
+---------------------------
+
+freeStandingBaffles : detected 0 free-standing baffles out of 0
+
+Detected free-standing baffles : 0
+Merged free-standing baffles in = 0.04 s
+
+
+dupNonManifoldPoints : Found : 0 non-manifold points (out of 97330)
+Detected unsplittable baffles : 0
+
+Merge refined boundary faces
+----------------------------
+
+Merging 0 sets of faces.
+
+No faces merged ...
+
+Merging all points on surface that
+- are used by only two boundary faces and
+- make an angle with a cosine of more than 0.70710678.
+
+No straight edges simplified and no points removed ...
+Refined mesh : cells:76360  faces:249754  points:97330
+Cells per refinement level:
+    0	28888
+    1	15088
+    2	32384
+Writing mesh to time constant
+Wrote mesh in = 0.27 s.
+Mesh refined in = 4.05 s.
+
+Morphing phase
+--------------
+
+Duplicating 0 points on faceZones of type boundary
+Snapping to features in 10 iterations ...
+Constructing mesh displacer ...
+Using mesh parameters 
+{
+    maxNonOrtho     65;
+    maxBoundarySkewness 20;
+    maxInternalSkewness 4;
+    maxConcave      80;
+    minVol          1e-13;
+    minTetQuality   1e-15;
+    minArea         -1;
+    minTwist        0.02;
+    minDeterminant  0.001;
+    minFaceWeight   0.05;
+    minVolRatio     0.01;
+    minTriangleTwist -1;
+    minEdgeLength   -1;
+}
+
+
+Checking initial mesh ...
+Checking faces in error :
+    non-orthogonality > 65  degrees                        : 0
+    faces with face pyramid volume < 1e-13                 : 0
+    faces with face-decomposition tet quality < 1e-15      : 0
+    faces with concavity > 80  degrees                     : 0
+    faces with skewness > 4   (internal) or 20  (boundary) : 0
+    faces with interpolation weights (0..1)  < 0.05        : 0
+    faces with volume ratio of neighbour cells < 0.01      : 0
+    faces with face twist < 0.02                           : 0
+    faces on cells with determinant < 0.001                : 0
+Detected 0 illegal faces (concave, zero area or negative cell pyramid volume)
+Checked initial mesh in = 0.58 s
+
+
+Smoothing patch points ...
+Smoothing iteration 0
+Found 0 non-manifold point(s).
+
+Scaling iteration 0
+
+
+--> FOAM FATAL IO ERROR: (openfoam-2412 patch=260127)
+Entry 'errorReduction' not found in dictionary "/home/saidul/of_heat_sink/system/snappyHexMeshDict/meshQualityControls"
+
+
+file: system/snappyHexMeshDict/meshQualityControls at line 18 to 77.
+
+    From bool Foam::dictionary::readEntry(const Foam::word&, T&, Foam::keyType::option, Foam::IOobjectOption::readOption) const [with T = double]
+    in file ./src/OpenFOAM/lnInclude/dictionaryTemplates.C at line 327.
+
+FOAM exiting
+

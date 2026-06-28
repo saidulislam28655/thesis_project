@@ -1,0 +1,31 @@
+#!/usr/bin/env python3
+import glob, csv
+def last_row(pattern):
+    files = sorted(glob.glob(pattern))
+    if not files: return None
+    rows=[]
+    with open(files[-1]) as fh:
+        for line in fh:
+            line=line.strip()
+            if not line or line.startswith('#'): continue
+            rows.append([float(x) for x in line.split()])
+    return rows[-1] if rows else None
+dp_row=last_row("postProcessing/pressureDrop/*/fieldValueDelta.dat")
+pt_row=last_row("postProcessing/peakTemperature/*/volFieldValue.dat")
+dp=dp_row[-1] if dp_row else float('nan')
+Tk=pt_row[-1] if pt_row else float('nan')
+Tc=Tk-273.15
+print("====================================================")
+print(f"  Pressure drop  (Pa, rho=1) : {dp:.4f}")
+print(f"  Peak temperature      (K)  : {Tk:.3f}")
+print(f"  Peak temperature      (C)  : {Tc:.2f}")
+print("====================================================")
+print("  PhysicsNeMo (param.)  Dp = 1.858 Pa   Tpeak = 52.66 C")
+if dp==dp and Tc==Tc:
+    print(f"  Error vs OpenFOAM:  Dp = {abs(1.858-dp)/dp*100:5.2f} %"
+          f"   Tpeak = {abs(52.66-Tc)/Tc*100:5.2f} %")
+with open("openfoam_result.csv","w",newline="") as fh:
+    w=csv.writer(fh)
+    w.writerow(["pressure_drop_Pa","peak_T_K","peak_T_C","h_mid","h_side","l_mid","l_side","t"])
+    w.writerow([f"{dp:.4f}",f"{Tk:.3f}",f"{Tc:.2f}",0.4,0.3,0.75,1.0,0.1])
+print("  Saved -> openfoam_result.csv")

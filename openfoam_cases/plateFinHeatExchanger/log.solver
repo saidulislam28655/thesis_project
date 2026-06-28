@@ -1,0 +1,181 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2412                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _b8cf4d35-20260127 OPENFOAM=2412 patch=260127 version=2412
+Arch   : "LSB;label=32;scalar=64"
+Exec   : chtMultiRegionFoam
+Date   : Jun 17 2026
+Time   : 01:28:13
+Host   : LAPTOP-8OT81PN8
+PID    : 1263
+I/O    : uncollated
+Case   : /home/saidul/OpenFOAM/run/openfoam_yt_tutorials/plateFinHeatSink/plateFinHeatExchanger
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create fluid mesh for region fluid for time = 0
+
+Create solid mesh for region heater for time = 0
+
+Create solid mesh for region fins for time = 0
+
+*** Reading fluid mesh thermophysical properties for region fluid
+
+    Adding to thermoFluid
+
+Selecting thermodynamics package 
+{
+    type            heRhoThermo;
+    mixture         pureMixture;
+    transport       const;
+    thermo          hConst;
+    equationOfState rhoConst;
+    specie          specie;
+    energy          sensibleEnthalpy;
+}
+
+--> FOAM Warning : 
+    From Foam::compressible::turbulentTemperatureCoupledBaffleMixedFvPatchScalarField::turbulentTemperatureCoupledBaffleMixedFvPatchScalarField(const Foam::fvPatch&, const Foam::DimensionedField<double, Foam::volMesh>&, const Foam::dictionary&)
+    in file derivedFvPatchFields/turbulentTemperatureCoupledBaffleMixed/turbulentTemperatureCoupledBaffleMixedFvPatchScalarField.C at line 119
+    This BC has been superseded by compressible::turbulentTemperatureRadCoupledMixed which has more functionalities and it can handle the assemble coupled option for energy. 
+    Adding to rhoFluid
+
+    Adding to UFluid
+
+    Adding to phiFluid
+
+    Adding to hRefFluid
+
+    Adding to ghFluid
+
+    Adding to ghfFluid
+
+    Adding to turbulenceFluid
+
+Selecting turbulence model type laminar
+Selecting laminar stress model Stokes
+    Adding to reactionFluid
+
+Combustion model not active: combustionProperties not found
+Selecting combustion model none
+    Adding to radiationFluid
+
+Radiation model not active: radiationProperties not found
+Selecting radiationModel none
+    Adding to KFluid
+
+    Adding to dpdtFluid
+
+    Adding to fieldsFluid
+
+    Adding to QdotFluid
+
+    Adding MRF
+
+No MRF models present
+
+    Adding fvOptions
+
+Creating finite volume options from "constant/fvOptions"
+
+Selecting finite volume options type limitTemperature
+    Source: temperatureLimit
+    - selecting all cells
+    - selected 157954 cell(s) with volume 0.00484489
+*** Reading solid mesh thermophysical properties for region heater
+
+    Adding to thermos
+
+Selecting thermodynamics package 
+{
+    type            heSolidThermo;
+    mixture         pureMixture;
+    transport       constIso;
+    thermo          hConst;
+    equationOfState rhoConst;
+    specie          specie;
+    energy          sensibleEnthalpy;
+}
+
+--> FOAM Warning : 
+    From Foam::compressible::turbulentTemperatureCoupledBaffleMixedFvPatchScalarField::turbulentTemperatureCoupledBaffleMixedFvPatchScalarField(const Foam::fvPatch&, const Foam::DimensionedField<double, Foam::volMesh>&, const Foam::dictionary&)
+    in file derivedFvPatchFields/turbulentTemperatureCoupledBaffleMixed/turbulentTemperatureCoupledBaffleMixedFvPatchScalarField.C at line 119
+    This BC has been superseded by compressible::turbulentTemperatureRadCoupledMixed which has more functionalities and it can handle the assemble coupled option for energy. 
+    Adding to radiations
+
+Radiation model not active: radiationProperties not found
+Selecting radiationModel none
+    Adding fvOptions
+
+Creating finite volume options from "constant/fvOptions"
+
+Selecting finite volume options type scalarSemiImplicitSource
+    Source: energySource
+    - selecting all cells
+    - selected 648 cell(s) with volume 1.92978e-06
+*** Reading solid mesh thermophysical properties for region fins
+
+    Adding to thermos
+
+Selecting thermodynamics package 
+{
+    type            heSolidThermo;
+    mixture         pureMixture;
+    transport       constIso;
+    thermo          hConst;
+    equationOfState rhoConst;
+    specie          specie;
+    energy          sensibleEnthalpy;
+}
+
+--> FOAM Warning : 
+    From Foam::compressible::turbulentTemperatureCoupledBaffleMixedFvPatchScalarField::turbulentTemperatureCoupledBaffleMixedFvPatchScalarField(const Foam::fvPatch&, const Foam::DimensionedField<double, Foam::volMesh>&, const Foam::dictionary&)
+    in file derivedFvPatchFields/turbulentTemperatureCoupledBaffleMixed/turbulentTemperatureCoupledBaffleMixedFvPatchScalarField.C at line 119
+    This BC has been superseded by compressible::turbulentTemperatureRadCoupledMixed which has more functionalities and it can handle the assemble coupled option for energy. 
+--> FOAM Warning : 
+    From Foam::compressible::turbulentTemperatureCoupledBaffleMixedFvPatchScalarField::turbulentTemperatureCoupledBaffleMixedFvPatchScalarField(const Foam::fvPatch&, const Foam::DimensionedField<double, Foam::volMesh>&, const Foam::dictionary&)
+    in file derivedFvPatchFields/turbulentTemperatureCoupledBaffleMixed/turbulentTemperatureCoupledBaffleMixedFvPatchScalarField.C at line 119
+    This BC has been superseded by compressible::turbulentTemperatureRadCoupledMixed which has more functionalities and it can handle the assemble coupled option for energy. 
+    Adding to radiations
+
+Radiation model not active: radiationProperties not found
+Selecting radiationModel none
+    Adding fvOptions
+
+Region: fluid Courant Number mean: 754.525 max: 11647.3
+Region: heater Diffusion Number mean: 35049.7 max: 312003
+Region: fins Diffusion Number mean: 144.034 max: 8186.49
+surfaceFieldValue averageTempHeaterFinInterface:
+    operation     = areaAverage
+
+
+Region: fluid Courant Number mean: 754.525 max: 11647.3
+Region: heater Diffusion Number mean: 35049.7 max: 312003
+Region: fins Diffusion Number mean: 144.034 max: 8186.49
+Time = 1
+
+[stack trace]
+=============
+#1  Foam::sigFpe::sigHandler(int) in /usr/lib/openfoam/openfoam2412/platforms/linux64GccDPInt32Opt/lib/libOpenFOAM.so
+#2  ? in /lib/x86_64-linux-gnu/libc.so.6
+#3  Foam::divide(Foam::Field<double>&, Foam::UList<double> const&, Foam::UList<double> const&) in /usr/lib/openfoam/openfoam2412/platforms/linux64GccDPInt32Opt/lib/libOpenFOAM.so
+#4  Foam::operator/(Foam::UList<double> const&, Foam::UList<double> const&) in /usr/lib/openfoam/openfoam2412/platforms/linux64GccDPInt32Opt/lib/libOpenFOAM.so
+#5  Foam::diagonalSolver::solve(Foam::Field<double>&, Foam::Field<double> const&, unsigned char) const in /usr/lib/openfoam/openfoam2412/platforms/linux64GccDPInt32Opt/lib/libOpenFOAM.so
+#6  Foam::fvMatrix<double>::solveSegregated(Foam::dictionary const&) in /usr/lib/openfoam/openfoam2412/platforms/linux64GccDPInt32Opt/lib/libfiniteVolume.so
+#7  ? in /usr/lib/openfoam/openfoam2412/platforms/linux64GccDPInt32Opt/lib/libfiniteVolume.so
+#8  Foam::fvMesh::solve(Foam::fvMatrix<double>&, Foam::dictionary const&) const in /usr/lib/openfoam/openfoam2412/platforms/linux64GccDPInt32Opt/lib/libfiniteVolume.so
+#9  ? in /usr/lib/openfoam/openfoam2412/platforms/linux64GccDPInt32Opt/bin/chtMultiRegionFoam
+#10  ? in /usr/lib/openfoam/openfoam2412/platforms/linux64GccDPInt32Opt/bin/chtMultiRegionFoam
+#11  ? in /lib/x86_64-linux-gnu/libc.so.6
+#12  __libc_start_main in /lib/x86_64-linux-gnu/libc.so.6
+#13  ? in /usr/lib/openfoam/openfoam2412/platforms/linux64GccDPInt32Opt/bin/chtMultiRegionFoam
+=============

@@ -1,0 +1,111 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2412                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _b8cf4d35-20260127 OPENFOAM=2412 patch=260127 version=2412
+Arch   : "LSB;label=32;scalar=64"
+Exec   : splitMeshRegions -cellZones -overwrite
+Date   : Jun 17 2026
+Time   : 01:25:42
+Host   : LAPTOP-8OT81PN8
+PID    : 1249
+I/O    : uncollated
+Case   : /home/saidul/OpenFOAM/run/openfoam_yt_tutorials/plateFinHeatSink/plateFinHeatExchanger
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+Creating single patch per inter-region interface.
+
+Trying to match regions to existing cell zones.
+
+
+Number of regions:3
+
+Writing region per cell file (for manual decomposition) to "/home/saidul/OpenFOAM/run/openfoam_yt_tutorials/plateFinHeatSink/plateFinHeatExchanger/constant/cellToRegion"
+
+Writing region per cell as volScalarField to "/home/saidul/OpenFOAM/run/openfoam_yt_tutorials/plateFinHeatSink/plateFinHeatExchanger/0/cellToRegion"
+
+Region	Cells
+------	-----
+0	157954
+1	54268
+2	648
+
+Region	Zone	Name
+------	----	----
+0	(0)	fluid
+1	(2)	fins
+2	(1)	heater
+
+Sizes of interfaces between regions:
+
+Interface	Region	Region	Faces
+---------	------	------	-----
+0		0	1	51172
+1		1	2	72
+
+Reading volScalarField: cellToRegion
+
+
+Adding patches
+
+
+Adding patches
+
+For interface between region fluid and fins added patches
+    5	fluid_to_fins
+    6	fins_to_fluid
+For interface between region fins and heater added patches
+    7	fins_to_heater
+    8	heater_to_fins
+
+Region 0
+-------- 
+Creating mesh for region 0 fluid
+Mapping fields
+Mapping field cellToRegion
+Deleting empty patches
+Writing new mesh
+Writing addressing to base mesh
+Writing map pointRegionAddressing from region0 points back to base mesh.
+Writing map faceRegionAddressing from region0 faces back to base mesh.
+Writing map cellRegionAddressing from region0 cells back to base mesh.
+Writing map boundaryRegionAddressing from region0 boundary back to base mesh.
+
+Region 1
+-------- 
+Creating mesh for region 1 fins
+Mapping fields
+Mapping field cellToRegion
+Deleting empty patches
+Writing new mesh
+Writing addressing to base mesh
+Writing map pointRegionAddressing from region1 points back to base mesh.
+Writing map faceRegionAddressing from region1 faces back to base mesh.
+Writing map cellRegionAddressing from region1 cells back to base mesh.
+Writing map boundaryRegionAddressing from region1 boundary back to base mesh.
+
+Region 2
+-------- 
+Creating mesh for region 2 heater
+Mapping fields
+Mapping field cellToRegion
+Deleting empty patches
+Writing new mesh
+Writing addressing to base mesh
+Writing map pointRegionAddressing from region2 points back to base mesh.
+Writing map faceRegionAddressing from region2 faces back to base mesh.
+Writing map cellRegionAddressing from region2 cells back to base mesh.
+Writing map boundaryRegionAddressing from region2 boundary back to base mesh.
+End
+

@@ -1,10 +1,14 @@
 *.pth
 events.out.*
-outputs/
 *.vtk
 *.vtu
+*.vtp
 *.foam
+*.zip
+*.npy
+*.npz
+**/constant/polyMesh/
+**/processor*/
 postProcessing/
-.DS_Store
 __pycache__/
-*.pyc
+.ipynb_checkpoints/

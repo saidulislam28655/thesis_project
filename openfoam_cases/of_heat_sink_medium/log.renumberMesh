@@ -1,0 +1,70 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2412                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _b8cf4d35-20260127 OPENFOAM=2412 patch=260127 version=2412
+Arch   : "LSB;label=32;scalar=64"
+Exec   : renumberMesh -overwrite
+Date   : Jun 12 2026
+Time   : 18:10:14
+Host   : LAPTOP-8OT81PN8
+PID    : 5463
+I/O    : uncollated
+Case   : /home/saidul/of_heat_sink
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+Mesh region0 size: 76360
+Before renumbering
+    band           : 73991
+    profile        : 1.0881092e+09
+
+Using renumber-method: CuthillMcKee [default]
+
+Reading fields
+    volScalarField: T p
+    volVectorField: UUsing dynamicCode for patch inlet on field U at line 10 in "/home/saidul/of_heat_sink/0/U/boundaryField/inlet"
+Could not load "/home/saidul/of_heat_sink/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libparabolicInlet_d212e610057f5ceb308d671306515b4ed4e99bc5.so"
+/home/saidul/of_heat_sink/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libparabolicInlet_d212e610057f5ceb308d671306515b4ed4e99bc5.so: cannot open shared object file: No such file or directory
+Creating new library in "dynamicCode/parabolicInlet/platforms/linux64GccDPInt32Opt/lib/libparabolicInlet_d212e610057f5ceb308d671306515b4ed4e99bc5.so"
+Invoking wmake libso /home/saidul/of_heat_sink/dynamicCode/parabolicInlet
+wmake libso /home/saidul/of_heat_sink/dynamicCode/parabolicInlet
+    ln: ./lnInclude
+    dep: fixedValueFvPatchFieldTemplate.C
+    Ctoo: fixedValueFvPatchFieldTemplate.C
+    link: /home/saidul/of_heat_sink/dynamicCode/parabolicInlet/../platforms/linux64GccDPInt32Opt/lib/libparabolicInlet_d212e610057f5ceb308d671306515b4ed4e99bc5.so
+
+Reading cellSet: concaveCells
+
+After renumbering
+    band           : 1970
+    profile        : 95515957
+
+Writing mesh to "constant"
+Reading hexRef8 data : cellLevel
+Reading hexRef8 data : pointLevel
+Reading hexRef8 data : level0Edge
+
+Timings:
+    read mesh   : 0.27595669
+    read fields : 10.609956
+    decompose   : 0
+    cell-cells  : 0
+    renumber    : 0.030338041
+    write       : 0.26600972
+TotalTime = 11.260294 s
+
+ExecutionTime = 0.66 s  ClockTime = 11 s
+
+End
+

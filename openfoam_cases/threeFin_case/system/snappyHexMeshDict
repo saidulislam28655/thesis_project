@@ -1,0 +1,96 @@
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      snappyHexMeshDict;
+}
+castellatedMesh true;
+snap            true;
+addLayers       false;
+
+geometry
+{
+    centralFin
+    {
+        type triSurfaceMesh;
+        file "centralFin.stl";
+    }
+    leftFin
+    {
+        type triSurfaceMesh;
+        file "leftFin.stl";
+    }
+    rightFin
+    {
+        type triSurfaceMesh;
+        file "rightFin.stl";
+    }
+}
+
+castellatedMeshControls
+{
+    maxLocalCells       100000;
+    maxGlobalCells      200000;
+    minRefinementCells  0;
+    maxLoadUnbalance    0.10;
+    nCellsBetweenLevels 1;
+    resolveFeatureAngle 30;
+    allowFreeStandingZoneFaces true;
+    locationInMesh (0.0 0.0 0.55);
+
+    refinementSurfaces
+    {
+        centralFin { level (2 2); patchInfo { type wall; } }
+        leftFin    { level (2 2); patchInfo { type wall; } }
+        rightFin   { level (2 2); patchInfo { type wall; } }
+    }
+    refinementRegions {}
+}
+
+snapControls
+{
+    nSmoothPatch    3;
+    tolerance       1.0;
+    nSolveIter      30;
+    nRelaxIter      5;
+}
+
+addLayersControls
+{
+    relativeSizes   true;
+    layers {}
+    expansionRatio      1.0;
+    finalLayerThickness 0.3;
+    minThickness        0.1;
+    nGrow               0;
+    featureAngle        30;
+    nRelaxIter          3;
+    nSmoothSurfaceNormals 1;
+    nSmoothNormals      10;
+    nSmoothThickness    10;
+    maxFaceThicknessRatio 0.5;
+    maxThicknessToMedialRatio 0.3;
+    minMedialAxisAngle  90;
+    nBufferCellsNoExtrude 0;
+    nLayerIter          50;
+}
+
+meshQualityControls
+{
+    maxNonOrtho         65;
+    maxBoundarySkewness 20;
+    maxInternalSkewness 4;
+    maxConcave          80;
+    minFlatness         0.5;
+    minVol              1e-13;
+    minTetQuality       1e-15;
+    minArea             -1;
+    minTwist            0.02;
+    minDeterminant      0.001;
+    minFaceWeight       0.05;
+    minVolRatio         0.01;
+    minTriangleTwist    -1;
+    nSmoothScale        4;
+    errorReduction      0.75;
+}
