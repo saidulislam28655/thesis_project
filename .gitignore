@@ -1,0 +1,10 @@
+*.pth
+events.out.*
+outputs/
+*.vtk
+*.vtu
+*.foam
+postProcessing/
+.DS_Store
+__pycache__/
+*.pyc
